@@ -11,8 +11,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use BrianFaust\PayPal\Facades\PayPal;
+use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
@@ -21,7 +21,7 @@ class PaymentController extends Controller
         PayPal::setDefaultConnection('sandbox');
 
         PayPal::getContext()->setConfig([
-            'mode' => 'sandbox',
+            'mode'             => 'sandbox',
             'service.EndPoint' => 'https://api.sandbox.paypal.com',
             // 'http.ConnectionTimeOut' => 30,
             // 'log.LogEnabled' => true,
