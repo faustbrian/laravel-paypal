@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\PayPal;
 
 use Illuminate\Contracts\Container\Container;
@@ -19,7 +21,7 @@ class PayPalServiceProvider extends ServiceProvider
     /**
      * Boot the service provider.
      */
-    public function boot()
+    public function boot(): void
     {
         $source = realpath(__DIR__.'/../config/paypal.php');
 
@@ -31,7 +33,7 @@ class PayPalServiceProvider extends ServiceProvider
     /**
      * Register the service provider.
      */
-    public function register()
+    public function register(): void
     {
         $this->registerFactory();
         $this->registerManager();
@@ -84,7 +86,7 @@ class PayPalServiceProvider extends ServiceProvider
      *
      * @return string[]
      */
-    public function provides()
+    public function provides(): array
     {
         return [
             'paypal',
