@@ -33,7 +33,7 @@ class PayPalFactory
      *
      * @return \PayPal\PayPal
      */
-    public function make(array $config)
+    public function make(array $config): PayPal
     {
         $config = $this->getConfig($config);
 
@@ -49,7 +49,7 @@ class PayPalFactory
      *
      * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         $keys = ['client_id', 'client_secret'];
 
@@ -69,7 +69,7 @@ class PayPalFactory
      *
      * @return \PayPal\PayPal
      */
-    protected function getClient(array $auth)
+    protected function getClient(array $auth): PayPal
     {
         return new PayPal(
             $auth['client_id'],

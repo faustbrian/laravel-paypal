@@ -54,7 +54,7 @@ class PayPalManager extends AbstractManager
      *
      * @return mixed
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): PayPal
     {
         return $this->factory->make($config);
     }
@@ -64,7 +64,7 @@ class PayPalManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'paypal';
     }
@@ -74,7 +74,7 @@ class PayPalManager extends AbstractManager
      *
      * @return \BrianFaust\PayPal\PayPalFactory
      */
-    public function getFactory()
+    public function getFactory(): PayPalFactory
     {
         return $this->factory;
     }

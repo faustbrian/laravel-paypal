@@ -50,7 +50,7 @@ class PayPal
      *
      * @return PayPal\Rest\ApiContext
      */
-    public function apiContext($clientId = null, $clientSecret = null, $requestId = null)
+    public function apiContext($clientId = null, $clientSecret = null, $requestId = null): ApiContext
     {
         return new ApiContext($this->getOAuthTokenCredential($clientId, $clientSecret), $requestId);
     }
@@ -80,7 +80,7 @@ class PayPal
     /**
      * @param \PayPal\Api\ApiContext $apiContext
      */
-    public function setContext($apiContext)
+    public function setContext($apiContext): void
     {
         $this->apiContext = $apiContext;
     }
@@ -88,7 +88,7 @@ class PayPal
     /**
      * @return \PayPal\Api\ApiContext
      */
-    public function getContext()
+    public function getContext(): ApiContext
     {
         return $this->apiContext;
     }
