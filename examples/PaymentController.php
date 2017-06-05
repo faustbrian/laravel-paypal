@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel PayPal.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Http\Controllers;
 
 use BrianFaust\PayPal\Facades\PayPal;
@@ -12,7 +21,7 @@ class PaymentController extends Controller
         PayPal::setDefaultConnection('sandbox');
 
         PayPal::getContext()->setConfig([
-            'mode' => 'sandbox',
+            'mode'             => 'sandbox',
             'service.EndPoint' => 'https://api.sandbox.paypal.com',
             // 'http.ConnectionTimeOut' => 30,
             // 'log.LogEnabled' => true,
