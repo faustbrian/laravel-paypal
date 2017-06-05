@@ -12,7 +12,7 @@ class PaymentController extends Controller
         PayPal::setDefaultConnection('sandbox');
 
         PayPal::getContext()->setConfig([
-            'mode'             => 'sandbox',
+            'mode' => 'sandbox',
             'service.EndPoint' => 'https://api.sandbox.paypal.com',
             // 'http.ConnectionTimeOut' => 30,
             // 'log.LogEnabled' => true,

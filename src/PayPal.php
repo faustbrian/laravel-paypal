@@ -1,9 +1,5 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\PayPal;
 
 use PayPal\Api\Payment;
@@ -64,7 +60,7 @@ class PayPal
     /**
      * @param \PayPal\Api\ApiContext $apiContext
      */
-    public function setContext($apiContext): void
+    public function setContext($apiContext)
     {
         $this->apiContext = $apiContext;
     }

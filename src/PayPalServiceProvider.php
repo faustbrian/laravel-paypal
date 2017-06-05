@@ -1,9 +1,5 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\PayPal;
 
 use Illuminate\Contracts\Container\Container;
@@ -14,22 +10,24 @@ class PayPalServiceProvider extends ServiceProvider
     /**
      * Boot the service provider.
      */
-    public function boot(): void
+    public function boot()
     {
-        $source = realpath(__DIR__.'/../config/paypal.php');
-
-        $this->publishes([$source => config_path('paypal.php')]);
-
-        $this->mergeConfigFrom($source, 'paypal');
+        $this->publishes([
+            __DIR__.'/../config/laravel-paypal.php' => config_path('laravel-paypal.php'),
+        ]);
     }
 
     /**
      * Register the service provider.
      */
-    public function register(): void
+    public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-paypal.php', 'laravel-paypal');
+
         $this->registerFactory();
+
         $this->registerManager();
+
         $this->registerBindings();
     }
 

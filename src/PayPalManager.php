@@ -1,9 +1,5 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\PayPal;
 
 use GrahamCampbell\Manager\AbstractManager;
@@ -50,7 +46,7 @@ class PayPalManager extends AbstractManager
      */
     protected function getConfigName(): string
     {
-        return 'paypal';
+        return 'laravel-paypal';
     }
 
     /**
