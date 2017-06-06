@@ -38,7 +38,7 @@ return [
     'connections' => [
 
         'main' => [
-            'client_id'     => 'your-client-id',
+            'client_id' => 'your-client-id',
             'client_secret' => 'your-client-secret',
         ],
 
