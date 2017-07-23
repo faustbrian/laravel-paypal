@@ -11,8 +11,8 @@
 
 namespace App\Http\Controllers;
 
-use BrianFaust\PayPal\Facades\PayPal;
 use Illuminate\Http\Request;
+use BrianFaust\PayPal\Facades\PayPal;
 
 class PaymentController extends Controller
 {
