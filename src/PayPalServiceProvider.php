@@ -11,8 +11,8 @@
 
 namespace BrianFaust\PayPal;
 
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container\Container;
 
 class PayPalServiceProvider extends ServiceProvider
 {
