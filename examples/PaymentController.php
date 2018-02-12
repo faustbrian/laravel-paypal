@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use BrianFaust\PayPal\Facades\PayPal;
+use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
