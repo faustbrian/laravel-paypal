@@ -1,16 +1,23 @@
 {
     "name": "artisanry/paypal",
     "description": "A PayPal bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-PayPal", "Laravel PayPal"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-PayPal",
+        "Laravel PayPal"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^5.6",
+        "php": "^7.2",
+        "illuminate/support": "^5.8",
         "graham-campbell/manager": "^3.0",
         "paypal/rest-api-sdk-php": "^1.1"
     },
