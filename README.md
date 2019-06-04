@@ -1,9 +1,9 @@
 # Laravel PayPal
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-PayPal/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-PayPal)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-paypal.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-PayPal.svg?style=flat-square)](https://github.com/faustbrian/Laravel-PayPal/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-PayPal.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-PayPal)
+[![Build Status](https://img.shields.io/travis/artisanry/PayPal/master.svg?style=flat-square)](https://travis-ci.org/artisanry/PayPal)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/paypal.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/PayPal.svg?style=flat-square)](https://github.com/artisanry/PayPal/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/PayPal.svg?style=flat-square)](https://packagist.org/packages/artisanry/PayPal)
 
 > A [PayPal](https://paypal.com) bridge for Laravel.
 
@@ -12,7 +12,7 @@
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require faustbrian/laravel-paypal
+$ composer require artisanry/paypal
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ $ composer require faustbrian/laravel-paypal
 Laravel PayPal requires connection configuration. To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\PayPal\PayPalServiceProvider"
+$ php artisan vendor:publish --provider="Artisanry\PayPal\PayPalServiceProvider"
 ```
 
 This will create a `config/paypal.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -53,7 +53,7 @@ Here you can see an example of just how simple this package is to use. Out of th
 
 ```php
 // You can alias this in config/app.php.
-use BrianFaust\PayPal\Facades\PayPal;
+use Artisanry\PayPal\Facades\PayPal;
 
 PayPal::getAll(['count' => 1, 'start_index' => 0]);
 // We're done here - how easy was that, it just works!
@@ -65,7 +65,7 @@ PayPal::getById($paymentId);
 The PayPal manager will behave like it is a `PayPal\PayPal`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
-use BrianFaust\PayPal\Facades\PayPal;
+use Artisanry\PayPal\Facades\PayPal;
 
 // Writing this…
 PayPal::connection('main')->getById($paymentId);
@@ -86,7 +86,7 @@ PayPal::setDefaultConnection('alternative'); // The default is now alternative.
 If you prefer to use dependency injection over facades like me, then you can inject the manager:
 
 ```php
-use BrianFaust\PayPal\PayPalManager;
+use Artisanry\PayPal\PayPalManager;
 
 class Foo
 {
@@ -118,7 +118,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -127,4 +127,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

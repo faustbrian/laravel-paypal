@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-paypal",
+    "name": "artisanry/paypal",
     "description": "A PayPal bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-PayPal", "Laravel PayPal", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-PayPal", "Laravel PayPal"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\PayPal\\": "src/"
+            "Artisanry\\PayPal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\PayPal\\": "tests"
+            "Artisanry\\Tests\\PayPal\\": "tests"
         }
     },
     "config": {
@@ -39,10 +39,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\PayPal\\PayPalServiceProvider"
+                "Artisanry\\PayPal\\PayPalServiceProvider"
             ],
             "aliases": {
-                "PayPal": "BrianFaust\\PayPal\\Facades\\PayPal"
+                "PayPal": "Artisanry\\PayPal\\Facades\\PayPal"
             }
         }
     },

@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel PayPal.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\PayPal;
+namespace Artisanry\PayPal;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
@@ -21,7 +21,7 @@ class PayPalManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \BrianFaust\PayPal\PayPalFactory
+     * @var \Artisanry\PayPal\PayPalFactory
      */
     private $factory;
 
@@ -29,7 +29,7 @@ class PayPalManager extends AbstractManager
      * Create a new PayPal manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \BrianFaust\PayPal\PayPalFactory        $factory
+     * @param \Artisanry\PayPal\PayPalFactory        $factory
      */
     public function __construct(Repository $config, PayPalFactory $factory)
     {
@@ -63,7 +63,7 @@ class PayPalManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \BrianFaust\PayPal\PayPalFactory
+     * @return \Artisanry\PayPal\PayPalFactory
      */
     public function getFactory(): PayPalFactory
     {
