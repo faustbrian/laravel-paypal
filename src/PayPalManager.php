@@ -29,7 +29,7 @@ class PayPalManager extends AbstractManager
      * Create a new PayPal manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Artisanry\PayPal\PayPalFactory        $factory
+     * @param \Artisanry\PayPal\PayPalFactory         $factory
      */
     public function __construct(Repository $config, PayPalFactory $factory)
     {
